@@ -1,0 +1,16 @@
+
+	srand(time(0));
+	int randomArr[1000];
+	int countSix = 0;
+
+	for (int i{ 0 }; i < 1000; i++) {
+
+		randomArr[i] = rand() % 100 + 1;
+		cout << randomArr[i] << endl;
+
+		if (randomArr[i] == 6) {
+			countSix += 1;
+		}
+	}
+	
+	cout << "The amount of 6 there are in the array is: " << countSix;
