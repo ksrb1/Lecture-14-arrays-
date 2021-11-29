@@ -1,0 +1,15 @@
+array<int, 10> input = {};
+
+	for (int i{ 0 }; i < 10; i++) {
+		cout << "Enter the number " << (i + 1) << ": ";
+		cin >> input[i];
+		while (cin.fail()) {
+			cout << "Invalid input.Please enter a correct input:";
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cin >> input[i];
+		}
+	}
+
+	sort(input.begin(), input.end());
+	cout << input.at(0);
